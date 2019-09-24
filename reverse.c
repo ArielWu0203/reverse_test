@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdint.h>
-
-#define times 1000000
+#include <stdlib.h>
 
 int32_t reverse(int32_t x){
     int32_t val = 0; int32_t i = 0;
@@ -13,10 +12,9 @@ int32_t reverse(int32_t x){
     return val;
 }
 
-int main() {
-    printf("pid: %d\n", getpid());
-    sleep(10);
+int main(int argc, char *argv[]) {
     
+    int times = atoi(argv[1]);
     for (int32_t i=0;i<times;i++) {
         reverse(i);
     }
