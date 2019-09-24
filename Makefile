@@ -35,4 +35,4 @@ const_test:
 .PHONY: clean
 clean:
 	@echo "Clean..."
-	-rm -rf .*o $(exe)
+	-rm -rf *.o $(exe)
